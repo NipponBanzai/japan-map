@@ -33,19 +33,14 @@
             background-color: rgba(255, 255, 255, 0.9); /* 白色背景，90%不透明度 */
             border-radius: 10px; /* 可选，添加圆角 */
             backdrop-filter: blur(10px); /* 添加模糊效果 */
+            min-width:320px;
+            min-height:500px;
         }
 
         /* 设置模态窗遮罩层的透明效果 */
         .modal-backdrop.show {
             background-color: rgba(0, 0, 0, 0.5); /* 黑色背景，50%不透明度 */
-        }
-
-
-        @media (max-width: 480px) {
-            .modal-content {
-                min-width: 400px;
-                min-height: 500px;
-            }
+        
 }
     </style>
     <script src="./assets/js/echarts.min.js"></script>
