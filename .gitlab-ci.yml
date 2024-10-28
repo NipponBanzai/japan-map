@@ -1,20 +1,21 @@
+
 # 使用默认的 GitLab Pages 镜像
 image: alpine:latest
 
-# 设置缓存以提升构建速度
+# 设置缓存
 cache:
   paths:
-    - .public/
+    - public/
 
-# 定义一个构建 job
+# 定义构建 job
 pages:
   stage: deploy
   script:
-    # 安装依赖项（如果需要 Node 或其他编译工具，可在这里安装）
-    - mkdir .public
-    - cp -r * .public/  # 将项目的所有文件复制到 .public 文件夹
+    # 创建 public 文件夹并将项目的所有文件复制到其中
+    - mkdir public
+    - cp -r * public/  # 将项目文件复制到 public 文件夹
   artifacts:
     paths:
-      - .public
+      - public  # 确保 public 文件夹在 artifacts 中
   only:
-    - main  # 只在主分支运行构建
+    - main  # 只在 main 分支上运行
