@@ -6,23 +6,20 @@
 # 使用默认的 GitLab Pages 镜像
 image: alpine:latest
 
-# 设置缓存以提升构建速度
-cache:
-  paths:
-    - .public/
-
-# 定义一个构建 job
+# 定义 pages 任务
 pages:
   stage: deploy
   script:
-    # 安装依赖项（如果需要 Node 或其他编译工具，可在这里安装）
-    - mkdir .public
-    - cp -r * .public/  # 将项目的所有文件复制到 .public 文件夹
+    # 创建 public 文件夹
+    - mkdir -p public
+    # 使用 rsync 排除 public 文件夹自身，复制所有内容到 public 中
+    - apk add --no-cache rsync  # 安装 rsync
+    - rsync -av --exclude='public' . public/
   artifacts:
     paths:
-      - .public
+      - public  # 指定 public 文件夹作为 GitLab Pages 发布目录
   only:
-    - main  # 只在主分支运行构建
+    - main  # 仅在 main 分支上执行
 ```
 
 ### 步骤解释：
