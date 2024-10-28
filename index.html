@@ -40,14 +40,13 @@
             background-color: rgba(0, 0, 0, 0.5); /* 黑色背景，50%不透明度 */
         }
 
-                /* 设置移动设备上的最小宽高 */
-                @media (max-width: 768px) {
-            .modal-dialog {
-                width: 90vw;
-                height: 70vh;
+
+        @media (max-width: 480px) {
+            .modal-content {
+                min-width: 400px;
+                min-height: 500px;
             }
-        }
-        
+}
     </style>
     <script src="./assets/js/echarts.min.js"></script>
     <script src="./assets/js/Japan.js"></script>

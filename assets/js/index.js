@@ -211,6 +211,7 @@ function make_map(cityname, dom_id) {
             areaColor: '#BC002D' // 被点击时的颜色
           }
         },
+        large: true, // 启用大数据模式渲染，适用于数据量大的情况
         label: {
           normal: {
             show: true,
