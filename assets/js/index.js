@@ -11,29 +11,29 @@ function make_map(cityname, dom_id) {
         "日本の最北端に位置し、四季折々の美しい自然が魅力です\n冬にはスキーリゾート、夏には美しい花畑が楽しめます",
       images: [
         {
-          src: "./assets/images/hokkaido/Hokkaido1363_2-thumb-345x345-2.jpg",
+          src: "../images/hokkaido/Hokkaido1363_2-thumb-345x345-2.jpg",
           title: "札幌とその周辺",
           caption:
             "冬はワンダーランド、夏は天国、札幌はすべてが屋外愛好家、素晴らしい食、有名なビールのためにある",
         },
         {
-          src: "./assets/images/hokkaido/Hokkaido1432_5-thumb-345x345-6726.jpg",
+          src: "../images/hokkaido/Hokkaido1432_5-thumb-345x345-6726.jpg",
           title: "函館と北海道南部",
           caption:
             "レトロな西洋の異国情緒、豊富な魚介類、奥地の楽しみと壮大な夜景",
         },
         {
-          src: "./assets/images/hokkaido/Hokkaido1504_4-thumb-345x345-5255.jpg",
+          src: "../images/hokkaido/Hokkaido1504_4-thumb-345x345-5255.jpg",
           title: "  釧路とひがし北海道",
           caption: "そのままの自然",
         },
         {
-          src: "./assets/images/hokkaido/Hokkaido2584_8-thumb-345x345-9.jpg",
+          src: "../images/hokkaido/Hokkaido2584_8-thumb-345x345-9.jpg",
           title: "ニセコスキーリゾートとその周辺",
           caption: "完璧なパウダースノーで世界中のスキーヤーを魅了",
         },
         {
-          src: "./assets/images/hokkaido/Hokkaido1449_10-thumb-345x345-4446.jpg",
+          src: "../images/hokkaido/Hokkaido1449_10-thumb-345x345-4446.jpg",
           title: "旭川と北海道北部",
           caption: "主要な動物園と世界有数の粉雪のある、繫栄する職人の街",
         },
@@ -44,12 +44,12 @@ function make_map(cityname, dom_id) {
         "日本の首都で、世界的に有名な高層ビルや多様な文化があります\n活気に満ちた街並みや、豊富な美味しい料理を楽しむことができます",
       images: [
         {
-          src: "./assets/images/tokyo/Tokyo2293_10.jpeg",
+          src: "../images/tokyo/Tokyo2293_10.jpeg",
           title: "両国",
           caption: "撲の本場はレトロな魅力でも有名です",
         },
         {
-          src: "./assets/images/tokyo/Tokyo2260_1.jpeg",
+          src: "../images/tokyo/Tokyo2260_1.jpeg",
           title: "東京タワーとその周辺",
           caption:
             "東京のシンボル的ランドマークはまばゆい光、豊かな文化そして江戸時代の静けさが重なる場所",
@@ -61,13 +61,13 @@ function make_map(cityname, dom_id) {
         "横浜市や鎌倉市があり、観光地として非常に人気があります\n美しい海岸線と多様な文化が融合しています",
       images: [
         {
-          src: "./assets/images/kanagawa/Kanagawa295_16.jpeg",
+          src: "../images/kanagawa/Kanagawa295_16.jpeg",
           title: "箱根",
           caption:
             "有名な温泉、素晴らしい遺産、そして世界クラスのリゾートからの富士山の絶景",
         },
         {
-          src: "./assets/images/kanagawa/Kanagawa227_9.jpeg",
+          src: "../images/kanagawa/Kanagawa227_9.jpeg",
           title: "川崎",
           caption: "東京の産業サイド",
         },
@@ -78,12 +78,12 @@ function make_map(cityname, dom_id) {
         "東京ディズニーリゾートや成田空港がある県で、観光客に人気があります\nまた、自然豊かな公園や美味しい海の幸も魅力です",
       images: [
         {
-          src: "./assets/images/chiba/Chiba140_4.jpeg",
+          src: "../images/chiba/Chiba140_4.jpeg",
           title: "成田とその周辺",
           caption: "日本の玄関口だが、周辺にも見どころがたくさん",
         },
         {
-          src: "./assets/images/chiba/Chiba126_5.jpeg",
+          src: "../images/chiba/Chiba126_5.jpeg",
           title: "千葉ベイエリア",
           caption:
             "世界的に有名な遊園地となだらかに起伏する公園があるにぎやかな港湾",
@@ -95,12 +95,12 @@ function make_map(cityname, dom_id) {
         "東京のベッドタウンとして知られていますが、美しい自然公園も点在しています\n家族連れに人気の遊園地もあります",
       images: [
         {
-          src: "./assets/images/saitama/Saitama1272_1.jpeg",
+          src: "../images/saitama/Saitama1272_1.jpeg",
           title: "熊谷",
           caption: "巨大なお寺や活気ある夏のお祭りが満載で、桜が咲き誇る街",
         },
         {
-          src: "./assets/images/saitama/Saitama1278_4.jpeg",
+          src: "../images/saitama/Saitama1278_4.jpeg",
           title: "川越",
           caption: "江戸時代の歴史的な雰囲気を残した東京北部の​​魅力的な街",
         },
@@ -111,13 +111,13 @@ function make_map(cityname, dom_id) {
         "筑波山があり、納豆やメロンが特産です\n自然や歴史的な名所も豊富です",
       images: [
         {
-          src: "./assets/images/ibaraki/Shiga346_2.jpeg",
+          src: "../images/ibaraki/Shiga346_2.jpeg",
           title: "水戸",
           caption:
             "茨城の県庁所在地：あらゆる年齢層が楽しめる芸術、庭園、体験観光",
         },
         {
-          src: "./assets/images/ibaraki/Ibaraki1580_4.jpeg",
+          src: "../images/ibaraki/Ibaraki1580_4.jpeg",
           title: "大洗とひたちなか",
           caption:
             "茨城県の海辺の町、大洗町とひたちなか市にはたくさんの見所があります",
@@ -129,12 +129,12 @@ function make_map(cityname, dom_id) {
         "日光東照宮があり、文化的な観光スポットが多くあります\n美味しいいちごや餃子が名物です",
       images: [
         {
-          src: "./assets/images/tochigi/Tochigi_8903029.jpeg",
+          src: "../images/tochigi/Tochigi_8903029.jpeg",
           title: "宇都宮",
           caption: "餃子、ジャズ、カクテルの街　大谷石文化の街",
         },
         {
-          src: "./assets/images/tochigi/Tochigi953_3.jpeg",
+          src: "../images/tochigi/Tochigi953_3.jpeg",
           title: "日光",
           caption: "壮大な建築、長い歴史、ありのままの自然が融合する場所",
         },
@@ -145,12 +145,12 @@ function make_map(cityname, dom_id) {
         "温泉地の草津温泉や美味しい野菜が特産です\n自然豊かな地域で、アウトドア活動に適しています",
       images: [
         {
-          src: "./assets/images/gunma/Gunma1635_1.jpeg",
+          src: "../images/gunma/Gunma1635_1.jpeg",
           title: "草津",
           caption: "湯けむり漂う草津は温泉街のトップのままです",
         },
         {
-          src: "./assets/images/gunma/Gunma1657_3.jpeg",
+          src: "../images/gunma/Gunma1657_3.jpeg",
           title: "高崎",
           caption: "縁起だるま、蒸気機関車、雰囲気のある山の温泉",
         },
@@ -161,12 +161,12 @@ function make_map(cityname, dom_id) {
         "宮城県は、東北地方の中心都市である仙台市があり、歴史と自然が調和した魅力的な地域です\n名物の牛タンや、松島の美しい景色など、観光客に人気のスポットが豊富です",
       images: [
         {
-          src: "./assets/images/miyagi/10729005212_dkmdci.jpeg",
+          src: "../images/miyagi/10729005212_dkmdci.jpeg",
           title: "仙台市",
           caption: "侍の歴史に満ちた近代都市",
         },
         {
-          src: "./assets/images/miyagi/H_00235_001.jpeg",
+          src: "../images/miyagi/H_00235_001.jpeg",
           title: "宮城の海岸エリア",
           caption: "宮城の美しい沿岸に散在するエメラルドグリーンの島々",
         },
@@ -292,8 +292,8 @@ function make_map(cityname, dom_id) {
         <div class="carousel-item  ${index === 0 ? "active" : ""}">
             <img src="${image.src}" class="d-block w-100" alt="${image.title}">
             <div class="carousel-caption d-none d-md-block">
-                <h5>${image.title}</h5>
-                <p>${image.caption}</p>
+                <h5 style="color: #ffffff !important;">${image.title}</h5>
+                <p style="color: #ffffff !important;">${image.caption}</p>
             </div>
         </div>
         `;
@@ -324,7 +324,7 @@ function make_map(cityname, dom_id) {
     style.innerHTML = `
       .modal-description {
           padding: 10px;
-          background-color: rgba(255, 255, 255, 0.8);
+          background-color: rgba(0, 0, 0, 0.1);
           border-radius: 5px;
           margin-top: 20px;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
