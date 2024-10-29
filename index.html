@@ -1,4 +1,5 @@
-<html>
+<html lang="ja">
+
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./assets/bootstrap5/css/bootstrap.css">
@@ -11,41 +12,49 @@
 
         /* 自定义关闭按钮的颜色 */
         .btn-close-custom {
-            background-color: #BC002D; /* 设置按钮背景颜色 */
-            color: #ffffff;            /* 设置按钮图标颜色 */
-            opacity: 1;                /* 控制透明度 */
-            transition: transform 0.2s ease; /* 添加平滑的过渡效果 */
+            background-color: #BC002D;
+            /* 设置按钮背景颜色 */
+            color: #ffffff;
+            /* 设置按钮图标颜色 */
+            opacity: 1;
+            /* 控制透明度 */
+            transition: transform 0.2s ease;
+            /* 添加平滑的过渡效果 */
         }
 
         /* 当悬停在按钮上时 */
         .btn-close-custom:hover {
-            transform: scale(1.2);    /* 将按钮放大到原来的1.2倍 */
+            transform: scale(1.2);
+            /* 将按钮放大到原来的1.2倍 */
             background-color: #BC002D;
             color: #ffffff;
         }
 
-        .btn-primary-custom:hover{
-            transform: scale(1.2); 
+        .btn-primary-custom:hover {
+            transform: scale(1.2);
         }
 
         /* 设置模态窗内容的透明背景 */
         .modal-content {
-            background-color: rgba(255, 255, 255, 0.9); /* 白色背景，90%不透明度 */
-            border-radius: 10px; /* 可选，添加圆角 */
-            backdrop-filter: blur(10px); /* 添加模糊效果 */
+            background-color: rgba(255, 255, 255, 0.9);
+            /* 白色背景，90%不透明度 */
+            border-radius: 10px;
+            /* 可选，添加圆角 */
+            backdrop-filter: blur(10px);
+            /* 添加模糊效果 */
+            min-width: 35em;
+            min-height: 40em;
         }
 
         /* 设置模态窗遮罩层的透明效果 */
         .modal-backdrop.show {
-            background-color: rgba(0, 0, 0, 0.5); /* 黑色背景，50%不透明度 */
-        
-}
+            background-color: rgba(0, 0, 0, 0.5);
+            /* 黑色背景，50%不透明度 */
+        }
     </style>
-    <script src="./assets/js/echarts.min.js"></script>
-    <script src="./assets/js/Japan.js"></script>
-    <script src="./assets/bootstrap5/js/bootstrap.js"></script>
-    <script src="./assets/bootstrap5/js/bootstrap.bundle.js"></script>
+
 </head>
+
 <body>
     <div id='map' class='citymap'></div>
 
@@ -65,7 +74,8 @@
                     <!-- 城市描述将会被 JavaScript 动态插入 -->
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary btn-primary-custom" onclick="myFunc()" data-bs-dismiss="modal">詳細</button>
+                    <button type="button" class="btn btn-primary btn-primary-custom" onclick="myFunc()"
+                        data-bs-dismiss="modal">詳細</button>
                     <button type="button" class="btn btn-close-custom" data-bs-dismiss="modal">閉じる</button>
                 </div>
             </div>
@@ -73,6 +83,10 @@
     </div>
 
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/echarts.min.js"></script>
+    <script src="./assets/js/Japan.js"></script>
+    <script src="./assets/bootstrap5/js/bootstrap.js"></script>
+    <script src="./assets/bootstrap5/js/bootstrap.bundle.js"></script>
     <script src='./assets/js/index.js'></script>
     <script>
         make_map('日本', 'map');
@@ -82,6 +96,5 @@
         }
     </script>
 </body>
+
 </html>
-
-
