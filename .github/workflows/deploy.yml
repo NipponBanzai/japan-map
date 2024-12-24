@@ -1,9 +1,15 @@
-name: Deploy to GitHub Pages
+name: Deploy static content to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # 修改為你的主要分支名稱
+      - main  # 修改为你的主要分支名称
+  workflow_dispatch:  # 允许手动触发工作流
+
+permissions:
+  contents: read  # 读取代码内容
+  pages: write    # 写入 GitHub Pages
+  id-token: write # 生成身份令牌
 
 jobs:
   deploy:
@@ -11,15 +17,16 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
-    - name: Setup Node.js (if required)
-      uses: actions/setup-node@v3
+    - name: Setup GitHub Pages
+      uses: actions/configure-pages@v4
+
+    - name: Upload static files
+      uses: actions/upload-pages-artifact@v3
       with:
-        node-version: '16' # 版本可根據需求調整
+        path: ./  # 指向你的 HTML 文件所在目录，通常是项目的根目录
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./ # 指向你的 HTML 文件所在的目錄
+      id: deployment
+      uses: actions/deploy-pages@v4
