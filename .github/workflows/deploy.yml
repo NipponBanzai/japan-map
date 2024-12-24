@@ -1,0 +1,38 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 在 main 分支推送时触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出代码
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 安装 rsync
+      - name: Install rsync
+        run: sudo apt-get update && sudo apt-get install -y rsync
+
+      # 设置 Node.js 环境（如需要构建步骤）
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # 创建 public 文件夹并同步文件
+      - name: Prepare public folder
+        run: |
+          mkdir -p public
+          rsync -av --exclude='public' . public/
+
+      # 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: public  # 指定 public 文件夹为发布目录
