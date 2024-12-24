@@ -3,33 +3,23 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # 在 main 分支推送时触发
+      - main  # 修改為你的主要分支名稱
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 检出代码
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      # 设置 Node.js 环境（如需要构建步骤）
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
+    - name: Setup Node.js (if required)
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16' # 版本可根據需求調整
 
-      # 创建 public 文件夹并同步文件
-      - name: Prepare public folder
-        run: |
-          mkdir -p public
-          rsync -av --exclude='public' . public/
-
-      # 部署到 GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages  # 确保发布到 gh-pages 分支
-          publish_dir: public       # 指定 public 文件夹为发布目录
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./ # 指向你的 HTML 文件所在的目錄
